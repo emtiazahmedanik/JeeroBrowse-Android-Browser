@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:layout_margin="0dp"
+    tools:context=".DownloadWithPauseResmueNew">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dpagebackground"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:id="@+id/layout2">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewfilenameset"
+            android:textSize="14sp"
+            android:text="This is file name"
+            android:maxLines="2"/>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewProgressOne"
+            android:textColor="#673AB7"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:text="0kb/0kb"
+            android:layout_below="@id/textViewfilenameset"
+            />
+
+
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:id="@+id/progressBarOne"
+                android:layout_below="@id/textViewProgressOne"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progressTint="#C64199"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/progressBarOne"
+                android:layout_marginTop="5dp"
+                android:id="@+id/buttonCancelOne"
+                android:background="#CD6161"
+                android:layout_marginStart="0dp"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="8sp"
+                android:drawableStart="@drawable/cancelbtn"
+                android:padding="2dp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/progressBarOne"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:id="@+id/buttonone"
+                android:background="#3895DD"
+                android:layout_marginStart="5dp"
+                android:textAllCaps="false"
+                android:text="Start"
+                android:padding="2dp"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:visibility="visible"
+                android:drawableStart="@drawable/baseline_downloading_24"
+
+                />
+
+
+    </RelativeLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout2"
+        android:id="@+id/coordinator">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:drawableStart="@drawable/baseline_arrow_drop_up_24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/downerror"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:padding="0dp"
+                android:textSize="9sp"
+                android:background="@drawable/teview_shadow"
+                android:textColor="@color/black"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="@string/about_download_errr"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="0dp"
+                android:textSize="10sp"
+                android:background="#009688"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:text="@string/dontworrynotification"/>
+
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:id="@+id/sheet"
+            android:layout_height="400dp"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            android:background="@drawable/bottomdrawerback">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baseline_arrow_drop_up_24"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="About Developer"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:textStyle="bold"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/white"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="© MD Emtiaz Ahmed"
+                    android:textColor="#FFEB3B"
+                    android:layout_margin="3dp"
+                    android:textSize="14sp"
+                    android:padding="2dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Emtiazlinkedin"
+                    android:gravity="center_horizontal"
+                    android:text="🔗www.linkedin.com/in/emtiaz-ahmed-"
+                    android:textColor="#FFEB3B"
+                    android:layout_margin="1dp"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp"
+                    android:padding="2dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FFEB3B"
+                    android:layout_margin="1dp"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp"
+                    android:padding="2dp"
+                    android:text="🔗https://github.com/emtiazahmedanik"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FFEB3B"
+                    android:layout_margin="1dp"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp"
+                    android:padding="2dp"
+                    android:text="📱 +8801641151403"/>
+            </LinearLayout>
+        </FrameLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+</RelativeLayout>

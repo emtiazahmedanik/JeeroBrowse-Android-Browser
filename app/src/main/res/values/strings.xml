@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JeeroBrowse</string>
+    <string name="about_download_errr">⚠ If you exit from this page, you will not see download progress even if you back again !</string>
+    <string name="dontworrynotification">☺ Don\'t worry about download. After complete you will get notification.</string>
+</resources>
